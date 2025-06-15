@@ -95,14 +95,12 @@
 		    <version>2.7</version>
 		</dependency>
 	</dependencies>
+	<distributionManagement>
+		<repository>
+			<id>github</id> <!-- must match settings.xml -->
+			<url>https://maven.pkg.github.com/mkptickpilot/tickpilot-platform</url>
+		</repository>
+	</distributionManagement>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 
 </project>
