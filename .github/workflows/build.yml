@@ -39,8 +39,8 @@ jobs:
     #       name: JUnit Tests
     #       list-tests: 'all'
     #       path: './**/TEST-*.xml'
-    #       token: ${{ secrets.GITHUB_TOKEN }}
+    #       token: ${{ secrets.GH_DEPLOY_TOKEN }}
       - name: Publish package
         run: mvn --batch-mode deploy -Dplatform.version="0.0.${GITHUB_RUN_NUMBER}"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_DEPLOY_TOKEN }}
